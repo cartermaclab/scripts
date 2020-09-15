@@ -28,6 +28,7 @@ install.packages(c(
 "miniUI",
 "MOTE",
 "pagedown",
+"pdftools",
 "pwr",
 "RefManageR",
 "renv",
