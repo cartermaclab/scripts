@@ -75,6 +75,7 @@ typeset -a REPO_PKGS=(
 "libmpfr-dev"
 "libnode-dev"
 "libopenblas-dev"
+"libpoppler-cpp-dev"
 "libssl-dev"
 "libxml2-dev"
 "libxt-dev"
