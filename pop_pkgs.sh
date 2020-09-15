@@ -132,6 +132,9 @@ wget -P ~/Downloads/ https://github.com/gohugoio/hugo/releases/download/v0.74.3/
 # Download current Tilix
 wget -P ~/Downloads/ https://github.com/gnunn1/tilix/releases/download/${TILIX_VER}/tilix.zip
 
+# Download current Miniconda
+wget -P ~/Downloads/ https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
 # Change shell to zsh
 echo
 echo "Changing shell to zsh"
