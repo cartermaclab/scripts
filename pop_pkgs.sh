@@ -80,7 +80,7 @@ typeset -a REPO_PKGS=(
 "libxml2-dev"
 "libxt-dev"
 "lm-sensors"
-"python-nautilus"
+"python3-nautilus"
 "r-base"
 "synaptic"
 "texlive-base"
