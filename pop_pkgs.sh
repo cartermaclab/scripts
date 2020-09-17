@@ -28,31 +28,30 @@ read -r -p "Have you verified contents of the script? [Y/n] " input
 case $input in
         [yY])
     echo
-    echo "Installing pop_pkgs..."
+    echo "Checking for and installing any updates..."
     echo
-    tput sgr0; sudo pacman -Syu  
+    sudo apt update && sudo apt upgrade -y
     ;;
         [nN])
     exit
     ;;
 esac
 
-
-# Check for updates
-echo "Checking for updates..."
-sudo apt update && sudo apt upgrade -y
-
 # Setup for current version of R
+echo
+echo "Adding keys for current version of R"
 sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
 
 # Setup for Brave Browser
+echo
+echo "Adding dependencies and key for Brave"
 sudo apt install apt-transport-https curl -y
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
-
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
 # Update package lists
+echo
 echo "Updating package lists..."
 sudo apt update
 
@@ -109,7 +108,11 @@ typeset -a FLATPAKS=(
 ) # }
 
 # Install lists
+echo
+echo "Installing packages from repository"
 sudo apt install ${REPO_PKGS[*]} -y
+echo
+echo "Installing flatpaks from flathub"
 flatpak install flathub ${FLATPAKS[*]} -y
 
 # Refresh font cache to fix jamovi plot problem
@@ -148,5 +151,3 @@ sleep 2
 echo "Exiting..."
 sleep 1
 exit 0
-
-
