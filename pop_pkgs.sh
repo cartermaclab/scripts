@@ -18,7 +18,7 @@
 
 
 # Define versions for downloads using wget in this strip
-RSTUDIO_VER=1.3.1091
+RSTUDIO_VER=1.3.1093
 JBMONO_VER=2.001
 TILIX_VER=1.9.3
 
@@ -60,6 +60,7 @@ typeset -a REPO_PKGS=(
 "biber"
 "brave-browser"
 "ffmpeg"
+"flameshot"
 "gir1.2-gtop-2.0"
 "gnome-tweaks"
 "gpick"
@@ -79,6 +80,7 @@ typeset -a REPO_PKGS=(
 "libxml2-dev"
 "libxt-dev"
 "lm-sensors"
+"mpv"
 "python3-nautilus"
 "r-base"
 "synaptic"
@@ -102,8 +104,10 @@ typeset -a FLATPAKS=(
 "com.spotify.Client"
 "com.visualstudio.code"
 "org.blender.Blender"
+"org.octave.Octave"
 "org.inkscape.Inkscape"
 "org.jamovi.jamovi"
+"uk.co.ibboard.cawbird"
 "us.zoom.Zoom"
 ) # }
 
