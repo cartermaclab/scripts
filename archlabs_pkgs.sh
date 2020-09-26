@@ -88,6 +88,7 @@ typeset -a USER_PKGS=(
 # printing supporting {
 typeset -a PRINT_PKGS=(
 "cups"
+"cups-filters"
 "cups-pdf"
 "cups-pk-helper"
 "ghostscript"
@@ -228,11 +229,3 @@ case $input in
     exit
     ;;
 esac
-
-
-
-
-
-
-
-
