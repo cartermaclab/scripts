@@ -28,7 +28,6 @@ install.packages(c(
 "miniUI",
 "MOTE",
 "pagedown",
-"pdftools",
 "pwr",
 "RefManageR",
 "renv",
@@ -36,10 +35,10 @@ install.packages(c(
 #"simstudy",
 "statcheck",
 "TOSTER",
-"WebPower"
+"WebPower",
+"xaringan"
 ))
 
-remotes::install_github('yihui/xaringan')
 remotes::install_github("gadenbuie/xaringanthemer")
 devtools::install_github("gadenbuie/xaringanExtra")
 devtools::install_github("ropenscilabs/icon")
