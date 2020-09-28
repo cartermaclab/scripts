@@ -18,10 +18,15 @@
 
 
 # Define versions for downloads using wget in this strip
-RSTUDIO_VER=1.3.1093
-JBMONO_VER=2.001
-TILIX_VER=1.9.3
-
+SLACK=4.9.1
+VSCODE=1.49.2
+ZOOM=5.3.465578.0920
+TEAMS=1.3.00.16851
+TEXMAKER=5.0.4
+RSTUDIO=1.3.1093
+JBMONO=2.002
+HUGO=0.75.1
+TILIX=1.9.3
 
 echo
 read -r -p "Have you verified contents of the script? [Y/n] " input
@@ -95,20 +100,19 @@ typeset -a REPO_PKGS=(
 "zsh"
 ) # }
 
-
 # List of flatpaks to install on fresh Pop!_OS installation {
 typeset -a FLATPAKS=(
-"com.microsoft.Teams"
+#"com.microsoft.Teams"
 "com.obsproject.Studio"
-"com.slack.Slack"
-"com.spotify.Client"
-"com.visualstudio.code"
+#"com.slack.Slack"
+#"com.spotify.Client"
+#"com.visualstudio.code"
 "org.blender.Blender"
-"org.octave.Octave"
+#"org.octave.Octave"
 "org.inkscape.Inkscape"
 "org.jamovi.jamovi"
 "uk.co.ibboard.cawbird"
-"us.zoom.Zoom"
+#"us.zoom.Zoom"
 ) # }
 
 # Install lists
@@ -122,26 +126,65 @@ flatpak install flathub ${FLATPAKS[*]} -y
 # Refresh font cache to fix jamovi plot problem
 flatpak run --command=fc-cache org.jamovi.jamovi -f -v
 
-# Download RStudio Preview
-wget -P ~/Downloads/ https://s3.amazonaws.com/rstudio-ide-build/desktop/bionic/amd64/rstudio-${RSTUDIO_VER}-amd64.deb
+# Download some packages
+mkdir -pv packages
+echo
+echo "Downloading some packages"
+echo
+# Download Slack
+echo
+echo "Downloading Slack..."
+wget -P ~/packages/ https://downloads.slack-edge.com/linux_releases/slack-desktop-${SLACK}-amd64.deb
+
+# Download VSCode
+echo
+echo "Downloading VSCode..."
+wget -P ~/packages/ https://update.code.visualstudio.com/${VSCODE}/linux-deb-x64/stable
+
+# Download Zoom
+echo
+echo "Downloading Zoom..."
+wget -P ~/packages/ https://zoom.us/client/${ZOOM}/zoom_amd64.deb
+
+# Download Teams
+echo
+echo "Downloading MS Teams..."
+wget -P ~/packages/ https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_${TEAMS}_amd64.deb
+
+# Download Texmaker
+echo
+echo "Downloading Texmaker..."
+wget -P ~/packages/ https://www.xm1math.net/texmaker/assets/files/texmaker_${TEXMAKER}_ubuntu_20_04_amd64.deb
+
+# Download RStudio
+echo
+echo "Downloading RStudio..."
+wget -P ~/packages/ https://download1.rstudio.org/desktop/bionic/amd64/rstudio-${RSTUDIO}-amd64.deb
 
 # Download JetBrains Mono font
-wget -P ~/Downloads/ https://download.jetbrains.com/fonts/JetBrainsMono-${JBMONO_VER}.zip
-#unzip ~/Downloads/JetBrainsMono-2.001.zip
-#rm -r ~/Downloads/JetBrainsMono-2.001/web/
-#mkdir -pv ~/.local/share/fonts
-#mv ~/Downloads/JetBrainsMono-2.001/ ~/.local/share/fonts
-#unzip ~/Downloads/JetBrainsMono-2.001.zip -d ~/.local/share/fonts
-#fc-cache -f -v
+echo
+echo "Downloading JetBrains Mono..."
+wget -P ~/packages/ https://github.com/JetBrains/JetBrainsMono/releases/download/v${JBMONO}/JetBrainsMono-${JBMONO}.zip
 
 # Download current Hugo version
-wget -P ~/Downloads/ https://github.com/gohugoio/hugo/releases/download/v0.74.3/hugo_0.74.3_Linux-64bit.deb
+echo
+echo "Downloading Hugo..."
+wget -P ~/packages/ https://github.com/gohugoio/hugo/releases/download/v${HUGO}/hugo_${HUGO}_Linux-64bit.deb
 
 # Download current Tilix
-wget -P ~/Downloads/ https://github.com/gnunn1/tilix/releases/download/${TILIX_VER}/tilix.zip
+echo
+echo "Downloading Tilix..."
+wget -P ~/packages/ https://github.com/gnunn1/tilix/releases/download/${TILIX}/tilix.zip
 
 # Download current Miniconda
-wget -P ~/Downloads/ https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+echo
+echo "Downloading Miniconda..."
+wget -P ~/packages/ https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+# Download antigen for zsh
+echo
+echo "Downloading Antigen..."
+curl -L git.io/antigen > antigen.zsh
 
 # Change shell to zsh
 echo
