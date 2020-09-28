@@ -32,7 +32,7 @@ install.packages(c(
 "RefManageR",
 "renv",
 "rmarkdown",
-#"simstudy",
+"simstudy",
 "statcheck",
 "TOSTER",
 "WebPower",
@@ -45,10 +45,10 @@ devtools::install_github("ropenscilabs/icon")
 devtools::install_github("mitchelloharawild/vitae")
 devtools::install_github("profandyfield/adventr", dependencies = TRUE)
 remotes::install_github("profandyfield/discovr")
+devtools::install_github("MathiasHarrer/dmetar")
 
 # other
 remotes::install_github("rstudio/fontawesome")
 devtools::install_github("gadenbuie/rsthemes")
 devtools::install_github("infotroph/DeLuciatoR") # for ggsave_fitmax
-devtools::install_github("MathiasHarrer/dmetar")
 devtools::install_github("crsh/papaja")
