@@ -17,11 +17,7 @@
 # current version of R from CRAN, RStudio Preview, and JetBrains Mono, etc.
 
 
-# Define versions for downloads using wget in this strip
-SLACK=4.9.1
-VSCODE=1.49.2
-ZOOM=5.3.465578.0920
-TEAMS=1.3.00.16851
+# Define versions for downloads using wget
 TEXMAKER=5.0.4
 RSTUDIO=1.3.1093
 JBMONO=2.002
@@ -86,6 +82,7 @@ typeset -a REPO_PKGS=(
 "libxt-dev"
 "lm-sensors"
 "mpv"
+"papirus-icon-theme"
 "python3-nautilus"
 "r-base"
 "synaptic"
@@ -102,17 +99,16 @@ typeset -a REPO_PKGS=(
 
 # List of flatpaks to install on fresh Pop!_OS installation {
 typeset -a FLATPAKS=(
-#"com.microsoft.Teams"
+"com.microsoft.Teams"
 "com.obsproject.Studio"
-#"com.slack.Slack"
-#"com.spotify.Client"
-#"com.visualstudio.code"
+"com.slack.Slack"
+"com.spotify.Client"
+"com.visualstudio.code"
 "org.blender.Blender"
-#"org.octave.Octave"
 "org.inkscape.Inkscape"
 "org.jamovi.jamovi"
 "uk.co.ibboard.cawbird"
-#"us.zoom.Zoom"
+"us.zoom.Zoom"
 ) # }
 
 # Install lists
@@ -131,26 +127,6 @@ mkdir -pv packages
 echo
 echo "Downloading some packages"
 echo
-# Download Slack
-echo
-echo "Downloading Slack..."
-wget -P ~/packages/ https://downloads.slack-edge.com/linux_releases/slack-desktop-${SLACK}-amd64.deb
-
-# Download VSCode
-echo
-echo "Downloading VSCode..."
-wget -P ~/packages/ https://update.code.visualstudio.com/${VSCODE}/linux-deb-x64/stable
-
-# Download Zoom
-echo
-echo "Downloading Zoom..."
-wget -P ~/packages/ https://zoom.us/client/${ZOOM}/zoom_amd64.deb
-
-# Download Teams
-echo
-echo "Downloading MS Teams..."
-wget -P ~/packages/ https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_${TEAMS}_amd64.deb
-
 # Download Texmaker
 echo
 echo "Downloading Texmaker..."
@@ -180,6 +156,14 @@ wget -P ~/packages/ https://github.com/gnunn1/tilix/releases/download/${TILIX}/t
 echo
 echo "Downloading Miniconda..."
 wget -P ~/packages/ https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+
+# Update papirus-icon-themes and download papirus-folders
+echo
+echo "Updating papirus icon theme..."
+wget -qO- https://git.io/papirus-icon-theme-install | sh
+echo
+echo "Downloading papirus folder script..."
+wget -qO- https://git.io/papirus-folders-install | sh
 
 # Download antigen for zsh
 echo
