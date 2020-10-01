@@ -15,6 +15,7 @@ install.packages(c(
 "emmeans",
 "emojifont",
 "faux",
+"gsDesign",
 "here",
 "huxtable",
 "jmv",
@@ -35,17 +36,17 @@ install.packages(c(
 "simstudy",
 "statcheck",
 "TOSTER",
+"vitae",
 "WebPower",
-"xaringan"
+"xaringan",
+"xaringanthemer"
 ))
 
-remotes::install_github("gadenbuie/xaringanthemer")
 devtools::install_github("gadenbuie/xaringanExtra")
 devtools::install_github("ropenscilabs/icon")
-devtools::install_github("mitchelloharawild/vitae")
 devtools::install_github("profandyfield/adventr", dependencies = TRUE)
-remotes::install_github("profandyfield/discovr")
 devtools::install_github("MathiasHarrer/dmetar")
+remotes::install_github("profandyfield/discovr")
 
 # other
 remotes::install_github("rstudio/fontawesome")
