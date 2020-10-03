@@ -1,13 +1,16 @@
 #!/bin/bash
 #set -e
+
+# -------------------------------------------------------
+# A script to automate personal package installation after a fresh
+# ArchLabs installation
 #
-# A script to automate personal package install on ArchLabs
 # Written by Michael Carter
-# Last updated: Aug 15 2020
 #
-# Some ideas and code adapted from other sources
-# Credit and acknowledgment to ArchLabs installer, 
-# ArcoLinuxD scripts, and the Arch Wiki
+# Some ideas and code adapted from other sources, mainly the ArchLabs
+# installer (https://www.archlabslinux.com) and the Arch Wiki
+#
+# -------------------------------------------------------
 
 # Define tput_menu
 BOLD="$(tput bold)"
@@ -30,6 +33,7 @@ typeset -a USER_PKGS=(
 "engrampa"
 "firefox"
 "flameshot"
+"flatpak"
 "fzf"
 "gcc-fortran"
 "gnome-disk-utility"
@@ -50,7 +54,6 @@ typeset -a USER_PKGS=(
 #"pandoc-citeproc"
 #"pandoc-crossref"
 "papirus-icon-theme"
-#"plank"
 "playerctl"
 "pulsemixer"
 "python-pip"
@@ -79,10 +82,6 @@ typeset -a USER_PKGS=(
 #"zathura"
 #"zathura-pdf-mupdf"
 #"zsh"
-#"zsh-autosuggestions"
-#"zsh-completions"
-#"zsh-history-substring-search"
-#"zsh-syntax-highlighting"
 ) # }
 
 # printing supporting {
@@ -132,8 +131,7 @@ case $input in
 esac
 
 
-# Install package arrays
-
+# Install user packages
 read -r -p "Install user packages? [(Y)es/(S)kip/(C)ancel] " input
 echo
 case $input in
@@ -149,8 +147,7 @@ case $input in
     ;;
 esac
 
-
-
+# Install printing support
 read -r -p "Install printing support? [(Y)es/(S)kip/(C)ancel] " input
 echo
 case $input in
@@ -167,7 +164,7 @@ case $input in
     ;;
 esac
 
-
+# Install bluetooth support
 read -r -p "Install bluetooth? [(Y)es/(S)kip/(C)ancel] " input
 echo
 case $input in
@@ -185,16 +182,40 @@ case $input in
     ;;
 esac
 
+
+# Import Spotify keys
+read -r -p "Import keys for spotify? [(Y)es/(S)kip/(C)ancel] " input
+echo
+case $input in
+        [yY])
+    echo
+    curl -sS https://download.spotify.com/debian/pubkey.gpg | gpg --import -
+    curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | gpg --import -
+    echo
+    ;;
+        [sS])
+    ;;
+        [cC])
+    exit
+    ;;
+esac
+
+
 # Enable TRIM support for SSD
-sudo systemctl enable --now fstrim.timer
-
-# Create directories
-mkdir -pv ~/.r/libs
-mkdir -pv ~/AUR
-
-# Clone aur repos
-#git clone
-
+read -r -p "Enable TRIM support for SSD with fstrim.timer? [(Y)es/(S)kip/(C)ancel] " input
+echo
+case $input in
+        [yY])
+    echo
+    sudo systemctl enable --now fstrim.timer
+    echo
+    ;;
+        [sS])
+    ;;
+        [cC])
+    exit
+    ;;
+esac
 
 
 echo ${BOLD}
