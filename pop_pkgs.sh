@@ -19,7 +19,7 @@
 
 # Define versions for downloads using wget
 TEXMAKER=5.0.4
-RSTUDIO=1.3.1093
+RSTUDIO=1.4.869
 JBMONO=2.002
 HUGO=0.75.1
 TILIX=1.9.3
@@ -123,39 +123,38 @@ flatpak install flathub ${FLATPAKS[*]} -y
 flatpak run --command=fc-cache org.jamovi.jamovi -f -v
 
 # Download some packages
-mkdir -pv packages
 echo
 echo "Downloading some packages"
 echo
 # Download Texmaker
 echo
 echo "Downloading Texmaker..."
-wget -P ~/packages/ https://www.xm1math.net/texmaker/assets/files/texmaker_${TEXMAKER}_ubuntu_20_04_amd64.deb
+wget -P ~/Downloads/ https://www.xm1math.net/texmaker/assets/files/texmaker_${TEXMAKER}_ubuntu_20_04_amd64.deb
 
 # Download RStudio
 echo
 echo "Downloading RStudio..."
-wget -P ~/packages/ https://download1.rstudio.org/desktop/bionic/amd64/rstudio-${RSTUDIO}-amd64.deb
+wget -P ~/Downloads/ https://s3.amazonaws.com/rstudio-ide-build/desktop/bionic/amd64/rstudio-${RSTUDIO}-amd64.deb
 
 # Download JetBrains Mono font
 echo
 echo "Downloading JetBrains Mono..."
-wget -P ~/packages/ https://github.com/JetBrains/JetBrainsMono/releases/download/v${JBMONO}/JetBrainsMono-${JBMONO}.zip
+wget -P ~/Downloads/ https://github.com/JetBrains/JetBrainsMono/releases/download/v${JBMONO}/JetBrainsMono-${JBMONO}.zip
 
 # Download current Hugo version
 echo
 echo "Downloading Hugo..."
-wget -P ~/packages/ https://github.com/gohugoio/hugo/releases/download/v${HUGO}/hugo_${HUGO}_Linux-64bit.deb
+wget -P ~/Downloads/ https://github.com/gohugoio/hugo/releases/download/v${HUGO}/hugo_${HUGO}_Linux-64bit.deb
 
 # Download current Tilix
 echo
 echo "Downloading Tilix..."
-wget -P ~/packages/ https://github.com/gnunn1/tilix/releases/download/${TILIX}/tilix.zip
+wget -P ~/Downloads/ https://github.com/gnunn1/tilix/releases/download/${TILIX}/tilix.zip
 
 # Download current Miniconda
 echo
 echo "Downloading Miniconda..."
-wget -P ~/packages/ https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
+wget -P ~/Downloads/ https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
 # Update papirus-icon-themes and download papirus-folders
 echo
