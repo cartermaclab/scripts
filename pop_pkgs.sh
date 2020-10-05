@@ -84,6 +84,7 @@ typeset -a REPO_PKGS=(
 "mpv"
 "papirus-icon-theme"
 "python3-nautilus"
+"qt5ct"
 "r-base"
 "synaptic"
 "texlive-base"
