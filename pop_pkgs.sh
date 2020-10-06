@@ -18,6 +18,8 @@
 
 
 # Define versions for downloads using wget
+CODE=1.49.3
+SLACK=4.9.1
 TEXMAKER=5.0.4
 RSTUDIO=1.4.869
 JBMONO=2.002
@@ -127,6 +129,17 @@ flatpak run --command=fc-cache org.jamovi.jamovi -f -v
 echo
 echo "Downloading some packages"
 echo
+
+# Download V
+echo
+echo "Downloading VSCode..."
+wget -P ~/Downloads/ https://packages.microsoft.com/repos/vscode/pool/main/c/code/code_${CODE}-1601661857_amd64.deb
+
+# Download Slack
+echo
+echo "Downloading Slack..."
+wget -P ~/Downloads/ https://downloads.slack-edge.com/linux_releases/slack-desktop-${SLACK}-amd64.deb
+
 # Download Texmaker
 echo
 echo "Downloading Texmaker..."
