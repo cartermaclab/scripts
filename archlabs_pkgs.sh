@@ -24,12 +24,11 @@ FG_CYAN="$(tput setaf 6)"
 
 # user packages {
 typeset -a USER_PKGS=(
-"adobe-source-sans-pro-fonts"
-"adobe-source-serif-pro-fonts"
-"archlabs-i3lock-fancy"
+#"adobe-source-sans-pro-fonts"
+#"adobe-source-serif-pro-fonts"
 "biber"
 #"calcurse"
-"dmenu"
+#"dmenu"
 "engrampa"
 "firefox"
 "flameshot"
@@ -61,6 +60,7 @@ typeset -a USER_PKGS=(
 "python-setproctitle"
 "python-pyxdg"
 "qt5ct"
+"qtile"
 "r"
 #"ranger"
 #"sxiv"
@@ -170,7 +170,7 @@ echo
 case $input in
         [yY])
     echo
-    sudo pacman -S ${USER_PKGS[*]} --noconfirm --needed
+    sudo pacman -S ${BLUE_PKGS[*]} --noconfirm --needed
     sudo systemctl enable --now bluetooth.service
     sudo sed -i 's/'#AutoEnable=false'/'AutoEnable=true'/g' /etc/bluetooth/main.conf
     echo
@@ -181,25 +181,6 @@ case $input in
     exit
     ;;
 esac
-
-
-# Import Spotify keys
-read -r -p "Import keys for spotify? [(Y)es/(S)kip/(C)ancel] " input
-echo
-case $input in
-        [yY])
-    echo
-    curl -sS https://download.spotify.com/debian/pubkey.gpg | gpg --import -
-    curl -sS https://download.spotify.com/debian/pubkey_0D811D58.gpg | gpg --import -
-    echo
-    ;;
-        [sS])
-    ;;
-        [cC])
-    exit
-    ;;
-esac
-
 
 # Enable TRIM support for SSD
 read -r -p "Enable TRIM support for SSD with fstrim.timer? [(Y)es/(S)kip/(C)ancel] " input
