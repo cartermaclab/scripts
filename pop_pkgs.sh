@@ -18,13 +18,13 @@
 
 
 # Define versions for downloads using wget
-CODE=1.49.3-1601661857
-SLACK=4.9.1
+CODE=1.50.0-1602051089
+SLACK=4.10.0
 TEAMS=1.3.00.25560
 TEXMAKER=5.0.4
-RSTUDIO=1.4.869
+RSTUDIO=1.4.904
 JBMONO=2.002
-HUGO=0.75.1
+HUGO=0.76.4
 TILIX=1.9.3
 
 echo
@@ -103,17 +103,20 @@ typeset -a REPO_PKGS=(
 
 # List of flatpaks to install on fresh Pop!_OS installation {
 typeset -a FLATPAKS=(
-#"com.microsoft.Teams"
 "com.obsproject.Studio"
-#"com.slack.Slack"
 "com.spotify.Client"
-#"com.visualstudio.code"
 "org.blender.Blender"
 "org.inkscape.Inkscape"
 "org.jamovi.jamovi"
 "uk.co.ibboard.cawbird"
-#"us.zoom.Zoom"
 ) # }
+
+# Other flatpaks
+#"com.microsoft.Teams"
+#"com.slack.Slack"
+#"com.visualstudio.code"
+#"us.zoom.Zoom"
+
 
 # Install lists
 echo
