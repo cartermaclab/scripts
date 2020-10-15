@@ -184,6 +184,11 @@ echo
 echo "Downloading Miniconda..."
 wget -P ~/Downloads/ https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
 
+# Download MasterPDF 4 (Free Version)
+echo
+echo "Downloading MasterPDF 4"
+wget -P ~/Downloads/ https://code-industry.net/public/master-pdf-editor-4.3.89_qt5.amd64.deb
+
 # Update papirus-icon-themes and download papirus-folders
 echo
 echo "Updating papirus icon theme..."
