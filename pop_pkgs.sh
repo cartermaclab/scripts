@@ -103,11 +103,13 @@ typeset -a REPO_PKGS=(
 
 # List of flatpaks to install on fresh Pop!_OS installation {
 typeset -a FLATPAKS=(
+"com.github.tchx84.Flatseal"
 "com.obsproject.Studio"
 "com.spotify.Client"
 "org.blender.Blender"
 "org.inkscape.Inkscape"
 "org.jamovi.jamovi"
+"org.kde.kdenlive"
 "uk.co.ibboard.cawbird"
 ) # }
 
