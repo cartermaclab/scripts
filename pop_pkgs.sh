@@ -66,6 +66,7 @@ typeset -a REPO_PKGS=(
 "ffmpeg"
 "flameshot"
 "gir1.2-gtop-2.0"
+"gnome-boxes"
 "gnome-sushi"
 "gnome-tweaks"
 "gpick"
