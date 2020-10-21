@@ -18,11 +18,11 @@
 
 
 # Define versions for downloads using wget
-CODE=1.50.0-1602051089
-SLACK=4.10.0
-TEAMS=1.3.00.25560
+#CODE=1.50.0-1602051089
+#SLACK=4.10.0
+#TEAMS=1.3.00.25560
 TEXMAKER=5.0.4
-RSTUDIO=1.4.904
+RSTUDIO=1.4.933
 JBMONO=2.002
 HUGO=0.76.4
 TILIX=1.9.3
@@ -66,6 +66,7 @@ typeset -a REPO_PKGS=(
 "ffmpeg"
 "flameshot"
 "gir1.2-gtop-2.0"
+"gnome-sushi"
 "gnome-tweaks"
 "gpick"
 "imagemagick"
@@ -104,21 +105,18 @@ typeset -a REPO_PKGS=(
 # List of flatpaks to install on fresh Pop!_OS installation {
 typeset -a FLATPAKS=(
 "com.github.tchx84.Flatseal"
+"com.microsoft.Teams"
 "com.obsproject.Studio"
+"com.slack.Slack"
 "com.spotify.Client"
+"com.visualstudio.code"
 "org.blender.Blender"
 "org.inkscape.Inkscape"
 "org.jamovi.jamovi"
 "org.kde.kdenlive"
 "uk.co.ibboard.cawbird"
+"us.zoom.Zoom"
 ) # }
-
-# Other flatpaks
-#"com.microsoft.Teams"
-#"com.slack.Slack"
-#"com.visualstudio.code"
-#"us.zoom.Zoom"
-
 
 # Install lists
 echo
@@ -137,24 +135,24 @@ echo "Downloading some packages"
 echo
 
 # Download Zoom
-echo
-echo "Downloading Zoom..."
-wget -P ~/Downloads/ https://zoom.us/client/latest/zoom_amd64.deb
+#echo
+#echo "Downloading Zoom..."
+#wget -P ~/Downloads/ https://zoom.us/client/latest/zoom_amd64.deb
 
 # Download Teams
-echo
-echo "Downloading Teams..."
-wget -P ~/Downloads/ https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_${TEAMS}_amd64.deb
+#echo
+#echo "Downloading Teams..."
+#wget -P ~/Downloads/ https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_${TEAMS}_amd64.deb
 
 # Download VSCode
-echo
-echo "Downloading VSCode..."
-wget -P ~/Downloads/ https://packages.microsoft.com/repos/vscode/pool/main/c/code/code_${CODE}_amd64.deb
+#echo
+#echo "Downloading VSCode..."
+#wget -P ~/Downloads/ https://packages.microsoft.com/repos/vscode/pool/main/c/code/code_${CODE}_amd64.deb
 
 # Download Slack
-echo
-echo "Downloading Slack..."
-wget -P ~/Downloads/ https://downloads.slack-edge.com/linux_releases/slack-desktop-${SLACK}-amd64.deb
+#echo
+#echo "Downloading Slack..."
+#wget -P ~/Downloads/ https://downloads.slack-edge.com/linux_releases/slack-desktop-${SLACK}-amd64.deb
 
 # Download Texmaker
 echo
