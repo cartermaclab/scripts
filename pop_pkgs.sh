@@ -115,6 +115,7 @@ typeset -a FLATPAKS=(
 "org.gnome.Todo"
 "org.inkscape.Inkscape"
 "org.jamovi.jamovi"
+"org.jaspstats.JASP"
 "org.kde.kdenlive"
 "uk.co.ibboard.cawbird"
 "us.zoom.Zoom"
@@ -128,8 +129,11 @@ echo
 echo "Installing flatpaks from flathub"
 flatpak install flathub ${FLATPAKS[*]} -y
 
-# Refresh font cache to fix jamovi plot problem
+# Refresh font cache to jamovi
 flatpak run --command=fc-cache org.jamovi.jamovi -f -v
+
+# Refresh font cache for jasp
+flatpak run --command=fc-cache org.jaspstats.JASP -f -v
 
 # Download some packages
 echo
@@ -203,6 +207,7 @@ wget -qO- https://git.io/papirus-folders-install | sh
 echo
 echo "Downloading Antigen..."
 curl -L git.io/antigen > antigen.zsh
+mv antigen.zsh ~/.config/
 
 # Change shell to zsh
 echo
