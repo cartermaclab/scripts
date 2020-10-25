@@ -18,14 +18,11 @@
 
 
 # Define versions for downloads using wget
-#CODE=1.50.0-1602051089
-#SLACK=4.10.0
-#TEAMS=1.3.00.25560
 TEXMAKER=5.0.4
-RSTUDIO=1.4.933
-JBMONO=2.002
-HUGO=0.76.4
-TILIX=1.9.3
+RSTUDIO=1.4.953
+JBMONO=2.200
+HUGO=0.76.5
+#TILIX=1.9.3
 
 echo
 read -r -p "Have you verified contents of the script? [Y/n] " input
@@ -42,10 +39,10 @@ case $input in
 esac
 
 # Setup for current version of R
-echo
-echo "Adding keys for current version of R"
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
-sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
+#echo
+#echo "Adding keys for current version of R"
+#sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+#sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
 
 # Setup for Brave Browser
 echo
@@ -91,6 +88,7 @@ typeset -a REPO_PKGS=(
 "qt5ct"
 "r-base"
 "synaptic"
+"tilix"
 "texlive-base"
 "texlive-bibtex-extra"
 "texlive-binaries"
@@ -181,19 +179,14 @@ echo "Downloading Hugo..."
 wget -P ~/Downloads/ https://github.com/gohugoio/hugo/releases/download/v${HUGO}/hugo_${HUGO}_Linux-64bit.deb
 
 # Download current Tilix
-echo
-echo "Downloading Tilix..."
-wget -P ~/Downloads/ https://github.com/gnunn1/tilix/releases/download/${TILIX}/tilix.zip
+#echo
+#echo "Downloading Tilix..."
+#wget -P ~/Downloads/ https://github.com/gnunn1/tilix/releases/download/${TILIX}/tilix.zip
 
 # Download current Miniconda
 echo
 echo "Downloading Miniconda..."
 wget -P ~/Downloads/ https://repo.anaconda.com/miniconda/Miniconda3-latest-Linux-x86_64.sh
-
-# Download MasterPDF 4 (Free Version)
-echo
-echo "Downloading MasterPDF 4"
-wget -P ~/Downloads/ https://code-industry.net/public/master-pdf-editor-4.3.89_qt5.amd64.deb
 
 # Update papirus-icon-themes and download papirus-folders
 echo
