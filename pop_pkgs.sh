@@ -161,7 +161,7 @@ echo
 # Download Texmaker
 echo
 echo "Downloading Texmaker..."
-wget -P ~/Downloads/ https://www.xm1math.net/texmaker/assets/files/texmaker_${TEXMAKER}_ubuntu_20_04_amd64.deb
+wget -P ~/Downloads/ https://www.xm1math.net/texmaker/assets/files/texmaker_${TEXMAKER}_ubuntu_20_10_amd64.deb
 
 # Download RStudio
 echo
