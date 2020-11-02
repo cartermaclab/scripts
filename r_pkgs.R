@@ -1,9 +1,9 @@
 # R packages for fresh installation
 
-# core packages
-install.packages(c("tidyverse", "devtools", "remotes"))
-
 install.packages(c(
+"tidyverse",
+"devtools",
+"remotes"
 "afex",
 "blogdown",
 "bookdown",
@@ -30,6 +30,7 @@ install.packages(c(
 "MOTE",
 "pagedown",
 "pwr",
+"psych",
 "RefManageR",
 "renv",
 "rmarkdown",
@@ -42,14 +43,12 @@ install.packages(c(
 "xaringanthemer"
 ))
 
+devtools::install_github("profandyfield/adventr", dependencies = TRUE)
+remotes::install_github("profandyfield/discovr")
 devtools::install_github("gadenbuie/xaringanExtra")
 devtools::install_github("ropenscilabs/icon")
-devtools::install_github("profandyfield/adventr", dependencies = TRUE)
 devtools::install_github("MathiasHarrer/dmetar")
-remotes::install_github("profandyfield/discovr")
-
-# other
-remotes::install_github("rstudio/fontawesome")
-devtools::install_github("gadenbuie/rsthemes")
-devtools::install_github("infotroph/DeLuciatoR") # for ggsave_fitmax
-devtools::install_github("crsh/papaja")
+#remotes::install_github("rstudio/fontawesome")
+#devtools::install_github("gadenbuie/rsthemes")
+#devtools::install_github("infotroph/DeLuciatoR") # for ggsave_fitmax
+#devtools::install_github("crsh/papaja")
