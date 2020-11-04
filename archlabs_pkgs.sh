@@ -64,6 +64,7 @@ typeset -a USER_PKGS=(
 "qtile"
 "r"
 #"ranger"
+"sxhkd"
 #"sxiv"
 "texlive-bibtexextra"
 "texlive-bin"
