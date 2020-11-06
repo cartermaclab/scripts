@@ -19,9 +19,9 @@
 
 # Define versions for downloads using wget
 TEXMAKER=5.0.4
-RSTUDIO=1.4.953
+RSTUDIO=1.4.999
 JBMONO=2.200
-HUGO=0.76.5
+HUGO=0.78.1
 #TILIX=1.9.3
 
 echo
@@ -31,7 +31,8 @@ case $input in
     echo
     echo "Checking for and installing any updates..."
     echo
-    sudo apt update && sudo apt upgrade -y
+    sudo apt update
+    sudo apt upgrade -y
     ;;
         [nN])
     exit
@@ -47,7 +48,7 @@ esac
 # Setup for Brave Browser
 echo
 echo "Adding dependencies and key for Brave"
-sudo apt install apt-transport-https curl -y
+sudo apt install apt-transport-https curl gnupg -y
 curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
 echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
