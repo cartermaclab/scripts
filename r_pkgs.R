@@ -27,6 +27,7 @@ install.packages(c(
 "meta",
 "metafor",
 "miniUI",
+"modelbased",
 "MOTE",
 "pagedown",
 "pwr",
