@@ -28,11 +28,11 @@ echo
 read -r -p "Have you verified contents of the script? [Y/n] " input
 case $input in
         [yY])
-    echo
-    echo "Checking for and installing any updates..."
-    echo
-    sudo apt update
-    sudo apt upgrade -y
+    #echo
+    #echo "Checking for and installing any updates..."
+    #echo
+    #sudo apt update
+    #sudo apt upgrade -y
     ;;
         [nN])
     exit
@@ -109,6 +109,7 @@ typeset -a FLATPAKS=(
 "com.slack.Slack"
 "com.spotify.Client"
 "com.visualstudio.code"
+"io.neovim.nvim"
 "org.blender.Blender"
 "org.gnome.Boxes"
 "org.gnome.Todo"
