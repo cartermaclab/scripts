@@ -3,7 +3,7 @@
 install.packages(c(
 "tidyverse",
 "devtools",
-"remotes"
+"remotes",
 "afex",
 "blogdown",
 "bookdown",
