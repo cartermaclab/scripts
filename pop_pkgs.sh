@@ -28,11 +28,6 @@ echo
 read -r -p "Have you verified contents of the script? [Y/n] " input
 case $input in
         [yY])
-    #echo
-    #echo "Checking for and installing any updates..."
-    #echo
-    #sudo apt update
-    #sudo apt upgrade -y
     ;;
         [nN])
     exit
@@ -44,13 +39,6 @@ esac
 #echo "Adding keys for current version of R"
 #sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
 #sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu focal-cran40/'
-
-# Setup for Brave Browser
-echo
-echo "Adding dependencies and key for Brave"
-sudo apt install apt-transport-https curl gnupg -y
-curl -s https://brave-browser-apt-release.s3.brave.com/brave-core.asc | sudo apt-key --keyring /etc/apt/trusted.gpg.d/brave-browser-release.gpg add -
-echo "deb [arch=amd64] https://brave-browser-apt-release.s3.brave.com/ stable main" | sudo tee /etc/apt/sources.list.d/brave-browser-release.list
 
 # Update package lists
 echo
