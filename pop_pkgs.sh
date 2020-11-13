@@ -19,9 +19,9 @@
 
 # Define versions for downloads using wget
 TEXMAKER=5.0.4
-RSTUDIO=1.4.999
-JBMONO=2.200
-HUGO=0.78.1
+RSTUDIO=1.4.1021
+JBMONO=2.210
+HUGO=0.78.2
 #TILIX=1.9.3
 
 echo
