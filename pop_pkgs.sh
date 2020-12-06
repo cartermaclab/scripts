@@ -20,7 +20,8 @@
 # Define versions for downloads using wget
 TEXMAKER=5.0.4
 RSTUDIO=1.4.1078
-JBMONO=2.210
+#JBMONO=2.210
+NERDFONT=2.1.0
 HUGO=0.79.0
 
 echo
@@ -137,10 +138,13 @@ echo
 echo "Downloading RStudio..."
 wget -P ~/Downloads/ https://s3.amazonaws.com/rstudio-ide-build/desktop/bionic/amd64/rstudio-${RSTUDIO}-amd64.deb
 
-# Download JetBrains Mono font
+# Download Nerd Fonts
 echo
-echo "Downloading JetBrains Mono..."
-wget -P ~/Downloads/ https://github.com/JetBrains/JetBrainsMono/releases/download/v${JBMONO}/JetBrainsMono-${JBMONO}.zip
+echo "Downloading JetBrainsMono Nerd..."
+wget -P ~/Downloads/ https://github.com/ryanoasis/nerd-fonts/releases/download/v${NERDFONT}/JetBrainsMono.zip
+echo
+echo "Downloading FiraCode Nerd..."
+wget -P ~/Downloads/ https://github.com/ryanoasis/nerd-fonts/releases/download/v${NERDFONT}/FiraCode.zip
 
 # Download current Hugo version
 echo
@@ -160,16 +164,10 @@ echo
 echo "Downloading papirus folder script..."
 wget -qO- https://git.io/papirus-folders-install | sh
 
-# Download antigen for zsh
-echo
-echo "Downloading Antigen..."
-curl -L git.io/antigen > antigen.zsh
-mv antigen.zsh ~/.config/
-
 # Change shell to zsh
-echo
-echo "Changing shell to zsh"
-chsh -s $(which zsh)
+#echo
+#echo "Changing shell to zsh"
+#chsh -s $(which zsh)
 
 # Exit
 echo
