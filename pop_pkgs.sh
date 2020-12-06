@@ -19,10 +19,9 @@
 
 # Define versions for downloads using wget
 TEXMAKER=5.0.4
-RSTUDIO=1.4.1038
+RSTUDIO=1.4.1078
 JBMONO=2.210
-HUGO=0.78.2
-#TILIX=1.9.3
+HUGO=0.79.0
 
 echo
 read -r -p "Have you verified contents of the script? [Y/n] " input
@@ -128,26 +127,6 @@ echo
 echo "Downloading some packages"
 echo
 
-# Download Zoom
-#echo
-#echo "Downloading Zoom..."
-#wget -P ~/Downloads/ https://zoom.us/client/latest/zoom_amd64.deb
-
-# Download Teams
-#echo
-#echo "Downloading Teams..."
-#wget -P ~/Downloads/ https://packages.microsoft.com/repos/ms-teams/pool/main/t/teams/teams_${TEAMS}_amd64.deb
-
-# Download VSCode
-#echo
-#echo "Downloading VSCode..."
-#wget -P ~/Downloads/ https://packages.microsoft.com/repos/vscode/pool/main/c/code/code_${CODE}_amd64.deb
-
-# Download Slack
-#echo
-#echo "Downloading Slack..."
-#wget -P ~/Downloads/ https://downloads.slack-edge.com/linux_releases/slack-desktop-${SLACK}-amd64.deb
-
 # Download Texmaker
 echo
 echo "Downloading Texmaker..."
@@ -167,11 +146,6 @@ wget -P ~/Downloads/ https://github.com/JetBrains/JetBrainsMono/releases/downloa
 echo
 echo "Downloading Hugo..."
 wget -P ~/Downloads/ https://github.com/gohugoio/hugo/releases/download/v${HUGO}/hugo_${HUGO}_Linux-64bit.deb
-
-# Download current Tilix
-#echo
-#echo "Downloading Tilix..."
-#wget -P ~/Downloads/ https://github.com/gnunn1/tilix/releases/download/${TILIX}/tilix.zip
 
 # Download current Miniconda
 echo
