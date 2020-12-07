@@ -48,6 +48,7 @@ sudo apt update
 # List of repo packages to install on fresh Pop!_OS installation {
 typeset -a REPO_PKGS=(
 "biber"
+"dconf-editor"
 "ffmpeg"
 "gir1.2-gtop-2.0"
 "gnome-sushi"
@@ -99,6 +100,7 @@ typeset -a FLATPAKS=(
 "com.visualstudio.code"
 "org.blender.Blender"
 "org.flameshot.Flameshot"
+"org.gabmus.hydrapaper"
 "org.gnome.Boxes"
 "org.gnome.Todo"
 "org.inkscape.Inkscape"
