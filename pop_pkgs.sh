@@ -37,7 +37,8 @@ esac
 # Setup for current version of R
 echo
 echo "Adding keys for current version of R"
-sudo apt-key adv --keyserver keyserver.ubuntu.com --recv-keys E298A3A825C0D65DFD57CBB651716619E084DAB9
+gpg --keyserver keyserver.ubuntu.com --recv-key E298A3A825C0D65DFD57CBB651716619E084DAB9
+gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key --keyring /etc/apt/trusted.gpg.d/E298A3A825C0D65DFD57CBB651716619E084DAB9.gpg add -
 sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu groovy-cran40/'
 
 # Update package lists
@@ -170,9 +171,9 @@ echo "Downloading papirus folder script..."
 wget -qO- https://git.io/papirus-folders-install | sh
 
 # Change shell to zsh
-#echo
-#echo "Changing shell to zsh"
-#chsh -s $(which zsh)
+echo
+echo "Changing shell to zsh"
+chsh -s $(which zsh)
 
 # Exit
 echo
