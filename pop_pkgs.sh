@@ -19,7 +19,7 @@
 
 # Define versions for downloads using wget
 TEXMAKER=5.0.4
-RSTUDIO=1.4.1078
+RSTUDIO=1.4.1081
 #JBMONO=2.210
 NERDFONT=2.1.0
 HUGO=0.79.0
