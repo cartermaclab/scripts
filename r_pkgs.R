@@ -5,6 +5,7 @@ install.packages(c(
   "devtools",
   "remotes",
   "afex",
+  "behaviorchange",
   "blogdown",
   "bookdown",
   "broom",
