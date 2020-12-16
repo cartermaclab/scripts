@@ -19,7 +19,7 @@
 
 # Define versions for downloads using wget
 TEXMAKER=5.0.4
-RSTUDIO=1.4.1081
+RSTUDIO=1.4.1090
 #JBMONO=2.210
 NERDFONT=2.1.0
 HUGO=0.79.0
@@ -60,6 +60,7 @@ typeset -a REPO_PKGS=(
 "libcairo2-dev"
 "libcurl4-openssl-dev"
 "libfontconfig1-dev"
+"libgconf-2-4"
 "libgit2-dev"
 "libgmp-dev"
 "libgsl-dev"
