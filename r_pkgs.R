@@ -46,6 +46,7 @@ install.packages(c(
   "ufs",
   "vitae",
   "WebPower",
+  "weightr",
   "xaringan",
   "xaringanthemer"
 ))
