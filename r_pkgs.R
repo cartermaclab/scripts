@@ -39,6 +39,7 @@ install.packages(c(
   "RefManageR",
   "renv",
   "rmarkdown",
+  "Routliers",
   "simstudy",
   "statcheck",
   "tint",
