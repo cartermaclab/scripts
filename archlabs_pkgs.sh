@@ -26,7 +26,7 @@ FG_CYAN="$(tput setaf 6)"
 typeset -a USER_PKGS=(
 #"adobe-source-sans-pro-fonts"
 #"adobe-source-serif-pro-fonts"
-"biber"
+#"biber"
 #"calcurse"
 #"dmenu"
 "engrampa"
@@ -48,23 +48,28 @@ typeset -a USER_PKGS=(
 #"maim"
 "mpv"
 #"nautilus"
-#"numlockx"
+"nmap"
+"noto-fonts"
+"noto-fonts-cjk"
+"numlockx"
 "openblas"
 #"pandoc"
 #"pandoc-citeproc"
 #"pandoc-crossref"
 "papirus-icon-theme"
+"pasystray"
 "playerctl"
-"pulsemixer"
+#"pulsemixer"
 "python-pip"
 "python-psutil"
 "python-setproctitle"
 "python-pyxdg"
 "qt5ct"
-"qtile"
+#"qtile"
 "r"
+"rofi"
 #"ranger"
-"sxhkd"
+#"sxhkd"
 #"sxiv"
 "texlive-bibtexextra"
 "texlive-bin"
@@ -73,9 +78,10 @@ typeset -a USER_PKGS=(
 "texlive-formatsextra"
 "texlive-latexextra"
 "texlive-publishers"
-"texmaker"
+#"texmaker"
 #"thunar-media-tags-plugin"
 "ttf-jetbrains-mono"
+"ttf-joypixels"
 "tk"
 #"viewnior"
 #"vifm"
@@ -160,7 +166,7 @@ case $input in
         [yY])
     echo
     sudo pacman -S ${PRINT_PKGS[*]} --noconfirm --needed
-    sudo systemctl enable --now org.cups.cupsd.socket
+    sudo systemctl enable --now cups.socket
     echo
     ;;
         [sS])
