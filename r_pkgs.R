@@ -9,6 +9,7 @@ install.packages(c(
   "blogdown",
   "bookdown",
   "broom",
+  "BUCSS",
   "cowplot",
   "datarium",
   "DT",
