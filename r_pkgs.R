@@ -35,6 +35,7 @@ install.packages(c(
   "modelbased",
   "MOTE",
   "pagedown",
+  "PASWR2",
   "pwr",
   "psych",
   "RefManageR",
