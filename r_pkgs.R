@@ -12,6 +12,7 @@ install.packages(c(
   "cowplot",
   "datarium",
   "DT",
+  "easypower",
   "effsize",
   "emmeans",
   "emojifont",
@@ -57,7 +58,8 @@ remotes::install_github("profandyfield/discovr")
 devtools::install_github("gadenbuie/xaringanExtra")
 devtools::install_github("ropenscilabs/icon")
 devtools::install_github("MathiasHarrer/dmetar")
-#remotes::install_github("rstudio/fontawesome")
+remotes::install_github("rstudio/fontawesome")
+devtools::install_github("easystats/easystats")
 #devtools::install_github("gadenbuie/rsthemes")
 #devtools::install_github("infotroph/DeLuciatoR") # for ggsave_fitmax
 #devtools::install_github("crsh/papaja")
