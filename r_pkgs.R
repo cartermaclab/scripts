@@ -43,6 +43,7 @@ install.packages(c(
   "renv",
   "rmarkdown",
   "Routliers",
+  "rpact",
   "simstudy",
   "statcheck",
   "tint",
@@ -62,6 +63,7 @@ devtools::install_github("ropenscilabs/icon")
 devtools::install_github("MathiasHarrer/dmetar")
 remotes::install_github("rstudio/fontawesome")
 devtools::install_github("easystats/easystats")
+#remotes::install_github("statisfactions/simpr")
 #devtools::install_github("gadenbuie/rsthemes")
 #devtools::install_github("infotroph/DeLuciatoR") # for ggsave_fitmax
 #devtools::install_github("crsh/papaja")
