@@ -21,10 +21,10 @@ FG_BLUE="$(tput setaf 4)"
 FG_MAGENTA="$(tput setaf 5)"
 FG_CYAN="$(tput setaf 6)"
 
-
 # user packages {
 typeset -a USER_PKGS=(
 "biber"
+"code"
 "engrampa"
 "firefox"
 "flatpak"
@@ -81,7 +81,10 @@ typeset -a USER_PKGS=(
 "xreader"
 #"zathura"
 #"zathura-pdf-mupdf"
-#"zsh"
+"zsh"
+"zsh-autosuggestions"
+"zsh-completions"
+"zsh-syntax-highlighting"
 ) # }
 
 # printing supporting {
