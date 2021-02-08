@@ -39,6 +39,7 @@ typeset -a USER_PKGS=(
 "julia"
 "libgit2"
 "libreoffice-fresh"
+"mate-power-manager"
 "mpv"
 "nmap"
 "noto-fonts"
