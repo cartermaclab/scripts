@@ -24,7 +24,6 @@ FG_CYAN="$(tput setaf 6)"
 # user packages {
 typeset -a USER_PKGS=(
 "biber"
-"code"
 "engrampa"
 "firefox"
 "flatpak"
@@ -51,12 +50,14 @@ typeset -a USER_PKGS=(
 #"pandoc-crossref"
 "papirus-icon-theme"
 "pasystray"
+"pavucontrol"
 "playerctl"
 #"pulsemixer"
 "python-pip"
 "python-psutil"
 "python-setproctitle"
 "python-pyxdg"
+"python-wheel"
 "qt5ct"
 "r"
 "rofi"
@@ -200,36 +201,10 @@ case $input in
     ;;
 esac
 
-
-echo ${BOLD}
-echo "----------------------------------------------"
-echo "----       INSTALLATION IS COMPLETE       ----"
-echo "----------------------------------------------"
+# Exit
 echo
-read -r -p "Would you like to reboot to finalize installation? [(Y)es/(N)o] " input
-echo
-case $input in
-        [yY])
-    echo ${FG_MAGENTA} "Rebooting in...";tput sgr0
-    echo "3"
-    sleep 1
-    echo "2"
-    sleep 1
-    echo "1"
-    sleep 1
-    systemctl reboot
-    echo
-    tput sgr0
-    ;;
-    [nN])
-    echo    
-    echo ${BOLD}${FG_RED} "Exiting in...";tput sgr0
-    echo "3"
-    sleep 1
-    echo "2"
-    sleep 1
-    echo "1"
-    sleep 1
-    exit
-    ;;
-esac
+echo "Installation of pop_pkgs completed succesfully."
+sleep 2
+echo "Exiting..."
+sleep 1
+exit 0
