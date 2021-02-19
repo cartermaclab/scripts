@@ -1,9 +1,10 @@
 # R packages for fresh installation
 
-install.packages(c(
+install.packages("pak", repos = "https://r-lib.github.io/p/pak/dev/")
+pak::pak_setup()
+
+pak::pkg_install(c(
   "tidyverse",
-  "devtools",
-  "remotes",
   "afex",
   "blogdown",
   "bookdown",
@@ -47,6 +48,7 @@ install.packages(c(
   "statcheck",
   "tint",
   "TOSTER",
+  "usethis",
   "ufs",
   "vitae",
   "WebPower",
@@ -55,13 +57,14 @@ install.packages(c(
   "xaringanthemer"
 ))
 
-devtools::install_github("profandyfield/adventr", dependencies = TRUE)
-remotes::install_github("profandyfield/discovr")
-devtools::install_github("gadenbuie/xaringanExtra")
-devtools::install_github("ropenscilabs/icon")
-devtools::install_github("MathiasHarrer/dmetar")
-remotes::install_github("rstudio/fontawesome")
-devtools::install_github("easystats/easystats")
+pak::pkg_install("gadenbuie/xaringanExtra")
+pak::pkg_install("ropenscilabs/icon")
+pak::pkg_install("MathiasHarrer/dmetar")
+pak::pkg_install("rstudio/fontawesome")
+pak::pkg_install("profandyfield/adventr")
+pak::pkg_install("profandyfield/discovr")
+pak::pkg_install("easystats/easystats")
+
 #remotes::install_github("statisfactions/simpr")
 #devtools::install_github("gadenbuie/rsthemes")
 #devtools::install_github("infotroph/DeLuciatoR") # for ggsave_fitmax
