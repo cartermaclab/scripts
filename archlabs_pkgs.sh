@@ -24,7 +24,7 @@ FG_CYAN="$(tput setaf 6)"
 # user packages {
 typeset -a USER_PKGS=(
 "biber"
-"engrampa"
+#"engrampa"
 "firefox"
 "flatpak"
 "fzf"
@@ -80,9 +80,9 @@ typeset -a USER_PKGS=(
 "xcb-util-keysyms"
 "xcb-util-cursor"
 "xcb-util-wm"
-"xreader"
-#"zathura"
-#"zathura-pdf-mupdf"
+#"xreader"
+"zathura"
+"zathura-pdf-mupdf"
 "zsh"
 "zsh-autosuggestions"
 "zsh-completions"
@@ -204,7 +204,7 @@ esac
 
 # Exit
 echo
-echo "Installation of pop_pkgs completed succesfully."
+echo "Installation completed succesfully."
 sleep 2
 echo "Exiting..."
 sleep 1
