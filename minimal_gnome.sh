@@ -225,35 +225,10 @@ case $input in
 esac
 
 
-echo ${BOLD}
-echo "----------------------------------------------"
-echo "----       INSTALLATION IS COMPLETE       ----"
-echo "----------------------------------------------"
+# Exit
 echo
-read -r -p "Would you like to reboot to finalize installation? [(Y)es/(N)o] " input
-echo
-case $input in
-        [yY])
-    echo ${FG_MAGENTA} "Rebooting in...";tput sgr0
-    echo "3"
-    sleep 1
-    echo "2"
-    sleep 1
-    echo "1"
-    sleep 1
-    systemctl reboot
-    echo
-    tput sgr0
-    ;;
-    [nN])
-    echo    
-    echo ${BOLD}${FG_RED} "Exiting in...";tput sgr0
-    echo "3"
-    sleep 1
-    echo "2"
-    sleep 1
-    echo "1"
-    sleep 1
-    exit
-    ;;
-esac
+echo "Installation completed succesfully."
+sleep 2
+echo "Exiting..."
+sleep 1
+exit 0
