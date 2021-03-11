@@ -22,6 +22,7 @@ pak::pkg_install(c(
   "here",
   "huxtable",
   "jmv",
+  "JuliaConnectoR",
   "kableExtra",
   "knitr",
   "komaletter",
