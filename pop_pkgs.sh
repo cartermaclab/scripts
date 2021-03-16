@@ -81,11 +81,13 @@ typeset -a REPO_PKGS=(
 typeset -a FLATPAKS=(
 "com.github.tchx84.Flatseal"
 "com.obsproject.Studio"
+"com.spotify.Client"
 "org.blender.Blender"
 #"org.gnome.Boxes"
 "org.jamovi.jamovi"
 "org.jaspstats.JASP"
 "org.kde.kdenlive"
+"org.zotero.Zotero"
 ) # }
 
 # Install lists
@@ -111,9 +113,9 @@ flatpak run --command=fc-cache org.jaspstats.JASP -f -v
 #wget -qO- https://git.io/papirus-folders-install | sh
 
 # Change shell to zsh
-echo
-echo "Changing shell to zsh"
-chsh -s $(which zsh)
+#echo
+#echo "Changing shell to zsh"
+#chsh -s $(which zsh)
 
 # Exit
 echo
