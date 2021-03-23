@@ -23,8 +23,11 @@ FG_CYAN="$(tput setaf 6)"
 
 # user packages {
 typeset -a USER_PKGS=(
+"autorandr"
 #"biber"
+"brightnessctl"
 #"engrampa"
+#"evince"
 "firefox"
 "flatpak"
 "fzf"
