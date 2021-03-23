@@ -64,6 +64,7 @@ pak::pkg_install("MathiasHarrer/dmetar")
 pak::pkg_install("rstudio/fontawesome")
 pak::pkg_install("profandyfield/adventr")
 pak::pkg_install("profandyfield/discovr")
+pak::pkg_install("gadenbuie/rsthemes")
 pak::pkg_install("easystats/easystats")
 
 #remotes::install_github("statisfactions/simpr")
