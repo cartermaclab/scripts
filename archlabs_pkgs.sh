@@ -29,6 +29,7 @@ typeset -a USER_PKGS=(
 #"engrampa"
 #"evince"
 "firefox"
+"flameshot"
 "flatpak"
 "fzf"
 "gcc-fortran"
