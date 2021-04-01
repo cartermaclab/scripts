@@ -5,6 +5,7 @@ pak::pak_setup()
 
 pak::pkg_install(c(
   "tidyverse",
+  "askpass",
   "afex",
   "blogdown",
   "bookdown",
