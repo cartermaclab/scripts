@@ -72,6 +72,7 @@ typeset -a USER_PKGS=(
 "qt5ct"
 "r"
 "rofi"
+"seahorse"
 #"sushi"
 "texlive-bibtexextra"
 "texlive-bin"
