@@ -47,6 +47,7 @@ typeset -a USER_PKGS=(
 "libgit2"
 "libreoffice-fresh"
 "linux-headers"
+"lxappearance-gtk3"
 #"mate-power-manager"
 "mpv"
 "namcap"
