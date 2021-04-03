@@ -23,6 +23,7 @@ FG_CYAN="$(tput setaf 6)"
 
 # user packages {
 typeset -a USER_PKGS=(
+"archlabs-i3lock-fancy"
 "autorandr"
 #"biber"
 "brightnessctl"
@@ -82,6 +83,7 @@ typeset -a USER_PKGS=(
 "texlive-formatsextra"
 "texlive-latexextra"
 "texlive-publishers"
+"ttf-font-awesome"
 "ttf-jetbrains-mono"
 "ttf-joypixels"
 "tk"
