@@ -1,7 +1,6 @@
 # R packages for fresh installation
 
 install.packages("pak", repos = "https://r-lib.github.io/p/pak/dev/")
-pak::pak_setup()
 
 pak::pkg_install(c(
   "tidyverse",
@@ -13,6 +12,7 @@ pak::pkg_install(c(
   "BUCSS",
   "cowplot",
   "datarium",
+  #"DescTools",
   "DT",
   "easypower",
   "effsize",
@@ -31,13 +31,16 @@ pak::pkg_install(c(
   "learnr",
   "linl",
   "lme4",
+  "lmerTest",
   "MBESS",
   "meta",
   "metafor",
   "miniUI",
   "modelbased",
   "MOTE",
+  "nlme",
   "pagedown",
+  "palmerpenguins",
   "PASWR2",
   "pwr",
   "psych",
@@ -55,6 +58,7 @@ pak::pkg_install(c(
   "vitae",
   "WebPower",
   "weightr",
+  "WRS2",
   "xaringan",
   "xaringanthemer"
 ))
@@ -67,9 +71,9 @@ pak::pkg_install("profandyfield/adventr")
 pak::pkg_install("profandyfield/discovr")
 pak::pkg_install("crsh/prereg")
 pak::pkg_install("GRousselet/rogme")
-pak::pkg_install("easystats/easystats")
 
-#remotes::install_github("statisfactions/simpr")
-#devtools::install_github("gadenbuie/rsthemes")
-#devtools::install_github("infotroph/DeLuciatoR") # for ggsave_fitmax
-#devtools::install_github("crsh/papaja")
+#pak::pkg_install("easystats/easystats")
+#pak::pkg_install("statisfactions/simpr")
+#pak::pkg_install("gadenbuie/rsthemes")
+#pak::pkg_install("infotroph/DeLuciatoR") # for ggsave_fitmax
+#pak::pkg_install("crsh/papaja")
