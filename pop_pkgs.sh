@@ -49,7 +49,7 @@ typeset -a REPO_PKGS=(
 "gpick"
 "imagemagick"
 "inkscape"
-"libasound2-dev"
+#"libasound2-dev" # related to psychopy
 "libcairo2-dev"
 "libcurl4-openssl-dev"
 "libfontconfig1-dev"
@@ -63,31 +63,31 @@ typeset -a REPO_PKGS=(
 "libopenblas-dev"
 "libpoppler-cpp-dev"
 "libssl-dev"
-"libusb-1.0-0-dev"
+#"libusb-1.0-0-dev" # related to psychopy
 #"libxml2-dev"
 "libxt-dev"
 "lm-sensors"
 "mpv"
 "neovim"
-"portaudio19-dev"
+#"portaudio19-dev" # related to psychopy
 "qt5ct"
-"r-base"
+#"r-base"
 "synaptic"
 "texlive-full"
-"zsh"
+#"zsh"
 ) # }
 
 # List of flatpaks to install on fresh Pop!_OS installation {
 typeset -a FLATPAKS=(
 "com.github.tchx84.Flatseal"
-"com.obsproject.Studio"
-"com.spotify.Client"
-"org.blender.Blender"
+#"com.obsproject.Studio"
+#"com.spotify.Client"
+#"org.blender.Blender"
 #"org.gnome.Boxes"
 "org.jamovi.jamovi"
-"org.jaspstats.JASP"
-"org.kde.kdenlive"
-"org.zotero.Zotero"
+#"org.jaspstats.JASP"
+#"org.kde.kdenlive"
+#"org.zotero.Zotero"
 ) # }
 
 # Install lists
@@ -102,7 +102,7 @@ flatpak install flathub ${FLATPAKS[*]} -y
 flatpak run --command=fc-cache org.jamovi.jamovi -f -v
 
 # Refresh font cache for jasp
-flatpak run --command=fc-cache org.jaspstats.JASP -f -v
+#flatpak run --command=fc-cache org.jaspstats.JASP -f -v
 
 # Update papirus-icon-themes and download papirus-folders
 #echo
