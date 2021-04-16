@@ -66,6 +66,7 @@ typeset -a USER_PKGS=(
 "pavucontrol"
 "playerctl"
 #"pulsemixer"
+"python-iwlib"
 "python-pip"
 "python-psutil"
 "python-setproctitle"
