@@ -19,6 +19,7 @@ pak::pkg_install(c(
   "emmeans",
   "emojifont",
   "faux",
+  "ggpubr",
   "gsDesign",
   "here",
   "huxtable",
