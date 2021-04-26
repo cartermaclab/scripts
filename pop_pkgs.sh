@@ -41,11 +41,12 @@ sudo apt update
 # List of repo packages to install on fresh Pop!_OS installation {
 typeset -a REPO_PKGS=(
 "biber"
+"code"
 "dconf-editor"
 "ffmpeg"
 "fonts-jetbrains-mono"
 "gir1.2-gtop-2.0"
-#"gnome-sushi"
+"gnome-sushi"
 "gnome-tweaks"
 "gpick"
 "imagemagick"
@@ -72,17 +73,19 @@ typeset -a REPO_PKGS=(
 "neovim"
 #"portaudio19-dev" # related to psychopy
 "qt5ct"
-#"r-base"
+"r-base"
 "synaptic"
 "texlive-full"
-#"zsh"
+"zsh"
+"zsh-autosuggestions"
+"zsh-syntax-highlighting"
 ) # }
 
 # List of flatpaks to install on fresh Pop!_OS installation {
 typeset -a FLATPAKS=(
 "com.github.tchx84.Flatseal"
 #"com.obsproject.Studio"
-#"com.spotify.Client"
+"com.spotify.Client"
 #"org.blender.Blender"
 #"org.gnome.Boxes"
 "org.jamovi.jamovi"
