@@ -44,7 +44,6 @@ typeset -a REPO_PKGS=(
 "code"
 "dconf-editor"
 "ffmpeg"
-"fonts-jetbrains-mono"
 "gir1.2-gtop-2.0"
 "gnome-sushi"
 "gnome-tweaks"
