@@ -73,6 +73,8 @@ pak::pkg_install("profandyfield/adventr")
 pak::pkg_install("profandyfield/discovr")
 pak::pkg_install("crsh/prereg")
 pak::pkg_install("GRousselet/rogme")
+pak::pkg_install("arcaldwell49/Superpower")
+
 
 #pak::pkg_install("easystats/easystats")
 #pak::pkg_install("statisfactions/simpr")
