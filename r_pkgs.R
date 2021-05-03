@@ -18,6 +18,7 @@ pak::pkg_install(c(
   "effsize",
   "emmeans",
   "emojifont",
+  "esc",
   "faux",
   "ggfortify",
   "ggpubr",
