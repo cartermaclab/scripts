@@ -18,7 +18,6 @@ pak::pkg_install(c(
   "effsize",
   "emmeans",
   "emojifont",
-  "esc",
   "faux",
   "ggfortify",
   "ggpubr",
@@ -75,10 +74,9 @@ pak::pkg_install("profandyfield/discovr")
 pak::pkg_install("crsh/prereg")
 pak::pkg_install("GRousselet/rogme")
 pak::pkg_install("arcaldwell49/Superpower")
-
+pak::pkg_install("crsh/papaja")
 
 #pak::pkg_install("easystats/easystats")
 #pak::pkg_install("statisfactions/simpr")
 #pak::pkg_install("gadenbuie/rsthemes")
 #pak::pkg_install("infotroph/DeLuciatoR") # for ggsave_fitmax
-#pak::pkg_install("crsh/papaja")
