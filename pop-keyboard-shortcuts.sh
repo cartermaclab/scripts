@@ -1,7 +1,7 @@
 #!/bin/sh
 
-#dconf write /org/gnome/mutter/dynamic-workspaces false
-#dconf write /org/gnome/desktop/wm/preferences/num-workspaces 9
+dconf write /org/gnome/mutter/dynamic-workspaces false
+dconf write /org/gnome/desktop/wm/preferences/num-workspaces 9
 
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-1 "['<Super>1']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-2 "['<Super>2']"
@@ -23,4 +23,4 @@ dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-7  "['<Super><Sh
 dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-8  "['<Super><Shift>8']"
 dconf write /org/gnome/desktop/wm/keybindings/move-to-workspace-9  "['<Super><Shift>9']"
 
-gsettings set org.gnome.desktop.wm.preferences button-layout ":"
+#gsettings set org.gnome.desktop.wm.preferences button-layout ":"

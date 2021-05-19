@@ -13,6 +13,7 @@ pak::pkg_install(c(
   "cowplot",
   "datarium",
   #"DescTools",
+  "devtools",
   "DT",
   "easypower",
   "effsize",
@@ -22,7 +23,9 @@ pak::pkg_install(c(
   "ggfortify",
   "ggpubr",
   "gsDesign",
+  "ggthemes", dependencies = TRUE,
   "here",
+  "hrbrthemes",
   "huxtable",
   "jmv",
   "JuliaConnectoR",
@@ -47,6 +50,7 @@ pak::pkg_install(c(
   "pwr",
   "psych",
   "RefManageR",
+  "remotes",
   "renv",
   "rmarkdown",
   "Routliers",
@@ -75,6 +79,8 @@ pak::pkg_install("crsh/prereg")
 pak::pkg_install("GRousselet/rogme")
 pak::pkg_install("arcaldwell49/Superpower")
 pak::pkg_install("crsh/papaja")
+pak::pkg_install("brentthorne/posterdown")
+pak::pkg_install("hrbrmstr/waffle")
 
 #pak::pkg_install("easystats/easystats")
 #pak::pkg_install("statisfactions/simpr")

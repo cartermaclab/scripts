@@ -63,6 +63,7 @@ typeset -a REPO_PKGS=(
 "libnode-dev"
 "libopenblas-dev"
 "libpoppler-cpp-dev"
+"libsecret-1-dev"
 "libssl-dev"
 #"libusb-1.0-0-dev" # related to psychopy
 #"libxml2-dev"
