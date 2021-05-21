@@ -23,7 +23,7 @@ pak::pkg_install(c(
   "ggfortify",
   "ggpubr",
   "gsDesign",
-  "ggthemes", dependencies = TRUE,
+  "ggthemes",
   "here",
   "hrbrthemes",
   "huxtable",
