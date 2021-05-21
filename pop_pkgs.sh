@@ -66,7 +66,7 @@ typeset -a REPO_PKGS=(
 "libsecret-1-dev"
 "libssl-dev"
 #"libusb-1.0-0-dev" # related to psychopy
-#"libxml2-dev"
+#"libxml2-dev" # installed by default in Pop!_OS
 "libxt-dev"
 "lm-sensors"
 "mpv"
