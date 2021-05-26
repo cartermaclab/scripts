@@ -2,13 +2,12 @@
 
 install.packages("pak", repos = "https://r-lib.github.io/p/pak/dev/")
 
-pak::pkg_install(c(
+cran_pkgs <- c(
   "tidyverse",
   "askpass",
   "afex",
   "blogdown",
   "bookdown",
-  "broom",
   "BUCSS",
   "cowplot",
   "datarium",
@@ -46,6 +45,7 @@ pak::pkg_install(c(
   "nlme",
   "pagedown",
   "palmerpenguins",
+  "parallelly",
   "PASWR2",
   "pwr",
   "psych",
@@ -67,20 +67,26 @@ pak::pkg_install(c(
   "WRS2",
   "xaringan",
   "xaringanthemer"
-))
+)
 
-pak::pkg_install("gadenbuie/xaringanExtra")
-pak::pkg_install("ropenscilabs/icon")
-pak::pkg_install("MathiasHarrer/dmetar")
-pak::pkg_install("rstudio/fontawesome")
-pak::pkg_install("profandyfield/adventr")
-pak::pkg_install("profandyfield/discovr")
-pak::pkg_install("crsh/prereg")
-pak::pkg_install("GRousselet/rogme")
-pak::pkg_install("arcaldwell49/Superpower")
-pak::pkg_install("crsh/papaja")
-pak::pkg_install("brentthorne/posterdown")
-pak::pkg_install("hrbrmstr/waffle")
+pak::pkg_install(cran_pkgs)
+
+gh_pkgs <- c(
+  "gadenbuie/xaringanExtra",
+  "ropenscilabs/icon",
+  "MathiasHarrer/dmetar",
+  "rstudio/fontawesome",
+  "profandyfield/adventr",
+  "profandyfield/discovr",
+  "crsh/prereg",
+  "GRousselet/rogme",
+  "arcaldwell49/Superpower",
+  "crsh/papaja",
+  "brentthorne/posterdown",
+  "hrbrmstr/waffle"
+)
+
+pak::pkg_install(gh_pkgs)
 
 #pak::pkg_install("easystats/easystats")
 #pak::pkg_install("statisfactions/simpr")
