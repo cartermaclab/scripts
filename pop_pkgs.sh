@@ -26,17 +26,10 @@ case $input in
     ;;
 esac
 
-# Setup for current version of R
-#echo
-#echo "Adding keys for current version of R"
-#gpg --keyserver keyserver.ubuntu.com --recv-key E298A3A825C0D65DFD57CBB651716619E084DAB9
-#gpg -a --export E298A3A825C0D65DFD57CBB651716619E084DAB9 | sudo apt-key --keyring /etc/apt/trusted.gpg.d/E298A3A825C0D65DFD57CBB651716619E084DAB9.gpg add -
-#sudo add-apt-repository 'deb https://cloud.r-project.org/bin/linux/ubuntu groovy-cran40/'
-
 # Update package lists
 echo
-echo "Updating package lists..."
-sudo apt update
+echo "Checking for and installing any updates..."
+sudo apt update && sudo apt upgrade
 
 # List of repo packages to install on fresh Pop!_OS installation {
 typeset -a REPO_PKGS=(
@@ -50,6 +43,7 @@ typeset -a REPO_PKGS=(
 "gpick"
 "imagemagick"
 "inkscape"
+"inxi"
 #"libasound2-dev" # related to psychopy
 "libcairo2-dev"
 "libcurl4-openssl-dev"
@@ -83,12 +77,12 @@ typeset -a REPO_PKGS=(
 
 # List of flatpaks to install on fresh Pop!_OS installation {
 typeset -a FLATPAKS=(
-"com.bitwarden.desktop"
+#"com.bitwarden.desktop"
 "com.github.tchx84.Flatseal"
 #"com.obsproject.Studio"
-"com.spotify.Client"
+#"com.spotify.Client"
 #"org.blender.Blender"
-"org.gnome.Boxes"
+#"org.gnome.Boxes"
 "org.gnome.GTG"
 "org.jamovi.jamovi"
 #"org.jaspstats.JASP"
@@ -122,6 +116,12 @@ flatpak run --command=fc-cache org.jamovi.jamovi -f -v
 #echo
 #echo "Changing shell to zsh"
 #chsh -s $(which zsh)
+
+# Create symlinks of desktop files to add NoDiplay=true
+#sudo ln -s /usr/share/applications/debian-xterm.desktop ~/.local/share/applications/debian-xterm.desktop
+#sudo ln -s /usr/share/applications/debian-uxterm.desktop ~/.local/share/applications/debian-uxterm.desktop
+#sudo ln -s /usr/share/applications/vim.desktop ~/.local/share/applications/vim.desktop
+
 
 # Exit
 echo
