@@ -58,7 +58,7 @@ cran_pkgs <- c(
   "simstudy",
   "statcheck",
   "tint",
-  "TOSTER",
+  #"TOSTER",
   "usethis",
   "ufs",
   "vitae",
@@ -72,23 +72,24 @@ cran_pkgs <- c(
 pak::pkg_install(cran_pkgs)
 
 gh_pkgs <- c(
+  "arcaldwell49/Superpower",
+  "brentthorne/posterdown",
+  "crsh/papaja",
+  "crsh/prereg",
   "gadenbuie/xaringanExtra",
-  "ropenscilabs/icon",
+  "gadenbuie/rsthemes",
+  "GRousselet/rogme",
+  "hrbrmstr/waffle",
+  "Lakens/TOSTER",
   "MathiasHarrer/dmetar",
-  "rstudio/fontawesome",
   "profandyfield/adventr",
   "profandyfield/discovr",
-  "crsh/prereg",
-  "GRousselet/rogme",
-  "arcaldwell49/Superpower",
-  "crsh/papaja",
-  "brentthorne/posterdown",
-  "hrbrmstr/waffle"
+  "ropenscilabs/icon",
+  "rstudio/fontawesome"
 )
 
 pak::pkg_install(gh_pkgs)
 
 #pak::pkg_install("easystats/easystats")
 #pak::pkg_install("statisfactions/simpr")
-#pak::pkg_install("gadenbuie/rsthemes")
 #pak::pkg_install("infotroph/DeLuciatoR") # for ggsave_fitmax
