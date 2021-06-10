@@ -24,22 +24,23 @@ FG_CYAN="$(tput setaf 6)"
 # user packages {
 typeset -a USER_PKGS=(
 "archlabs-i3lock-fancy"
-"autorandr"
+#"autorandr"
 #"biber"
-"brightnessctl"
-#"dconf-editor"
-"engrampa"
-#"evince"
-#"file-roller"
+#"brightnessctl"
+"curl"
+"dconf-editor"
+#"engrampa"
+"evince"
+"file-roller"
 "firefox"
 #"flameshot"
 "flatpak"
 "fzf"
 "gcc-fortran"
 "gnome-disk-utility"
-#"gnome-terminal"
+"gnome-terminal"
 #"gnome-themes-extra"
-"gpick"
+#"gpick"
 "gvfs-smb"
 "hugo"
 "hunspell-en_ca"
@@ -50,15 +51,15 @@ typeset -a USER_PKGS=(
 "libreoffice-fresh"
 "libsecret"
 "linux-headers"
-"lxappearance-gtk3"
+#"lxappearance-gtk3"
 #"mate-power-manager"
 "mpv"
-"namcap"
-#"nautilus"
+#"namcap"
+"nautilus"
 "nmap"
 "noto-fonts"
 "noto-fonts-cjk"
-"numlockx"
+#"numlockx"
 "openblas"
 #"pandoc"
 #"pandoc-citeproc"
@@ -77,7 +78,8 @@ typeset -a USER_PKGS=(
 "qt5ct"
 "r"
 "rofi"
-#"seahorse"
+"rustup"
+"seahorse"
 #"sushi"
 "texlive-bibtexextra"
 "texlive-bin"
@@ -157,7 +159,7 @@ echo
 case $input in
         [yY])
     echo
-    sudo pacman -S ${USER_PKGS[*]} --noconfirm --needed
+    sudo pacman -S ${USER_PKGS[*]} --needed
     echo
     ;;
         [sS])
@@ -173,7 +175,7 @@ echo
 case $input in
         [yY])
     echo
-    sudo pacman -S ${PRINT_PKGS[*]} --noconfirm --needed
+    sudo pacman -S ${PRINT_PKGS[*]} --needed
     sudo systemctl enable --now cups.socket
     echo
     ;;
@@ -190,7 +192,7 @@ echo
 case $input in
         [yY])
     echo
-    sudo pacman -S ${BLUE_PKGS[*]} --noconfirm --needed
+    sudo pacman -S ${BLUE_PKGS[*]} --needed
     sudo systemctl enable --now bluetooth.service
     sudo sed -i 's/'#AutoEnable=false'/'AutoEnable=true'/g' /etc/bluetooth/main.conf
     echo
@@ -209,6 +211,24 @@ case $input in
         [yY])
     echo
     sudo systemctl enable --now fstrim.timer
+    echo
+    ;;
+        [sS])
+    ;;
+        [cC])
+    exit
+    ;;
+esac
+
+# Finalize Rust setup
+read -r -p "Configure rustup? [(Y)es/(S)kip/(C)ancel] " input
+echo
+case $input in
+        [yY])
+    echo
+    rustup default stable
+    rustup update stable
+    rutup self upgrade-data
     echo
     ;;
         [sS])
