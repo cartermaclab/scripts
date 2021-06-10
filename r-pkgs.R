@@ -76,6 +76,7 @@ gh_pkgs <- c(
   "brentthorne/posterdown",
   "crsh/papaja",
   "crsh/prereg",
+  "easystats/easystats",
   "gadenbuie/xaringanExtra",
   "gadenbuie/rsthemes",
   "GRousselet/rogme",
@@ -90,6 +91,5 @@ gh_pkgs <- c(
 
 pak::pkg_install(gh_pkgs)
 
-#pak::pkg_install("easystats/easystats")
 #pak::pkg_install("statisfactions/simpr")
 #pak::pkg_install("infotroph/DeLuciatoR") # for ggsave_fitmax
