@@ -80,7 +80,7 @@ typeset -a FLATPAKS=(
 #"com.bitwarden.desktop"
 "com.github.tchx84.Flatseal"
 #"com.obsproject.Studio"
-#"com.spotify.Client"
+"com.spotify.Client"
 #"org.blender.Blender"
 #"org.gnome.Boxes"
 "org.gnome.GTG"
@@ -113,9 +113,9 @@ flatpak run --command=fc-cache org.jamovi.jamovi -f -v
 #wget -qO- https://git.io/papirus-folders-install | sh
 
 # Change shell to zsh
-#echo
-#echo "Changing shell to zsh"
-#chsh -s $(which zsh)
+echo
+echo "Changing shell to zsh"
+chsh -s $(which zsh)
 
 # Create symlinks of desktop files to add NoDiplay=true
 #sudo ln -s /usr/share/applications/debian-xterm.desktop ~/.local/share/applications/debian-xterm.desktop
