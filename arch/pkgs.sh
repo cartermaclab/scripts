@@ -46,12 +46,12 @@ typeset -a USER_PKGS=(
 "hunspell-en_ca"
 "hunspell-en_us"
 "inkscape"
-"julia"
+#"julia"
 "libgit2"
 "libreoffice-fresh"
 "libsecret"
 "linux-headers"
-#"lxappearance-gtk3"
+"lxappearance-gtk3"
 #"mate-power-manager"
 "mpv"
 #"namcap"
@@ -69,12 +69,12 @@ typeset -a USER_PKGS=(
 "pavucontrol"
 "playerctl"
 #"pulsemixer"
-"python-iwlib"
-"python-pip"
-"python-psutil"
-"python-setproctitle"
-"python-pyxdg"
-"python-wheel"
+#"python-iwlib"
+#"python-pip"
+#"python-psutil"
+#"python-setproctitle"
+#"python-pyxdg"
+#"python-wheel"
 "qt5ct"
 "r"
 "rofi"
@@ -89,7 +89,7 @@ typeset -a USER_PKGS=(
 "texlive-latexextra"
 "texlive-publishers"
 "ttf-font-awesome"
-"ttf-jetbrains-mono"
+#"ttf-jetbrains-mono"
 "ttf-joypixels"
 "tk"
 #"vifm"
@@ -228,7 +228,7 @@ case $input in
     echo
     rustup default stable
     rustup update stable
-    rutup self upgrade-data
+    rustup self upgrade-data
     echo
     ;;
         [sS])
