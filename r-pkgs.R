@@ -11,7 +11,6 @@ cran_pkgs <- c(
   "BUCSS",
   "cowplot",
   "datarium",
-  #"DescTools",
   "devtools",
   "DT",
   "easypower",
@@ -21,7 +20,6 @@ cran_pkgs <- c(
   "faux",
   "ggfortify",
   "ggpubr",
-  #"gsDesign",
   "ggthemes",
   "here",
   "hrbrthemes",
@@ -58,7 +56,6 @@ cran_pkgs <- c(
   "simstudy",
   "statcheck",
   "tint",
-  #"TOSTER",
   "usethis",
   "ufs",
   "vitae",
@@ -78,7 +75,7 @@ gh_pkgs <- c(
   "crsh/prereg",
   "easystats/easystats",
   "gadenbuie/xaringanExtra",
-  #"gadenbuie/rsthemes",
+  "gadenbuie/rsthemes",
   "GRousselet/rogme",
   "hrbrmstr/waffle",
   "Lakens/TOSTER",
@@ -86,10 +83,10 @@ gh_pkgs <- c(
   "profandyfield/adventr",
   "profandyfield/discovr",
   "ropenscilabs/icon",
-  "rstudio/fontawesome"
+  "rstudio/fontawesome",
+  "statisfactions/simpr",
+  "thomasp85/patchwork"
 )
 
 pak::pkg_install(gh_pkgs)
 
-#pak::pkg_install("statisfactions/simpr")
-#pak::pkg_install("infotroph/DeLuciatoR") # for ggsave_fitmax
