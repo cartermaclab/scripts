@@ -29,18 +29,17 @@ typeset -a USER_PKGS=(
 #"brightnessctl"
 "curl"
 "dconf-editor"
-#"engrampa"
 "evince"
 "file-roller"
 "firefox"
-#"flameshot"
+"flameshot"
 "flatpak"
 "fzf"
 "gcc-fortran"
 "gnome-disk-utility"
 "gnome-terminal"
-#"gnome-themes-extra"
-#"gpick"
+"gnome-themes-extra"
+"gpick"
 "gvfs-smb"
 "hugo"
 "hunspell-en_ca"
@@ -52,7 +51,6 @@ typeset -a USER_PKGS=(
 "libsecret"
 "linux-headers"
 "lxappearance-gtk3"
-#"mate-power-manager"
 "mpv"
 #"namcap"
 "nautilus"
@@ -69,16 +67,17 @@ typeset -a USER_PKGS=(
 "pavucontrol"
 "playerctl"
 #"pulsemixer"
-#"python-iwlib"
-#"python-pip"
-#"python-psutil"
-#"python-setproctitle"
-#"python-pyxdg"
-#"python-wheel"
+"python-iwlib"
+"python-pip"
+"python-psutil"
+"python-setproctitle"
+"python-pyxdg"
+"python-wheel"
 "qt5ct"
+"qtile"
 "r"
 "rofi"
-"rustup"
+#"rustup"
 "seahorse"
 #"sushi"
 "texlive-bibtexextra"
@@ -221,22 +220,22 @@ case $input in
 esac
 
 # Finalize Rust setup
-read -r -p "Configure rustup? [(Y)es/(S)kip/(C)ancel] " input
-echo
-case $input in
-        [yY])
-    echo
-    rustup default stable
-    rustup update stable
-    rustup self upgrade-data
-    echo
-    ;;
-        [sS])
-    ;;
-        [cC])
-    exit
-    ;;
-esac
+#read -r -p "Configure rustup? [(Y)es/(S)kip/(C)ancel] " input
+#echo
+#case $input in
+#        [yY])
+#    echo
+#    rustup default stable
+#    rustup update stable
+#    rustup self upgrade-data
+#    echo
+#    ;;
+#        [sS])
+#    ;;
+#        [cC])
+#    exit
+#    ;;
+#esac
 
 # Exit
 echo
