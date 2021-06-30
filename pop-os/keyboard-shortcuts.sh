@@ -1,7 +1,7 @@
 #!/bin/sh
 
-dconf write /org/gnome/mutter/dynamic-workspaces false
-dconf write /org/gnome/desktop/wm/preferences/num-workspaces 9
+#dconf write /org/gnome/mutter/dynamic-workspaces false
+#dconf write /org/gnome/desktop/wm/preferences/num-workspaces 9
 
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-1 "['<Super>1']"
 dconf write /org/gnome/desktop/wm/keybindings/switch-to-workspace-2 "['<Super>2']"
