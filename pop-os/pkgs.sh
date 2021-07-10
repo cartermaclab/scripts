@@ -63,6 +63,7 @@ typeset -a REPO_PKGS=(
 #"libxml2-dev" # installed by default in Pop!_OS
 "libxt-dev"
 "lm-sensors"
+"meld"
 "mpv"
 "neovim"
 #"portaudio19-dev" # related to psychopy
