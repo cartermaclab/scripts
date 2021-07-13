@@ -74,6 +74,7 @@ pak::pkg_install(cran_pkgs)
 gh_pkgs <- c(
   "arcaldwell49/Superpower",
   "brentthorne/posterdown",
+  "crsh/citr",
   "crsh/papaja",
   "crsh/prereg",
   "easystats/easystats",
@@ -83,6 +84,7 @@ gh_pkgs <- c(
   "hrbrmstr/waffle",
   "Lakens/TOSTER",
   "MathiasHarrer/dmetar",
+  "paleolimbot/rbbt",
   "profandyfield/adventr",
   "profandyfield/discovr",
   "ropenscilabs/icon",
