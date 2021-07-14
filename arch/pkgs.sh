@@ -23,6 +23,7 @@ FG_CYAN="$(tput setaf 6)"
 
 # user packages {
 typeset -a USER_PKGS=(
+"adwaita-icon-theme"
 "archlabs-i3lock-fancy"
 #"autorandr"
 #"biber"
@@ -74,7 +75,7 @@ typeset -a USER_PKGS=(
 "python-pyxdg"
 "python-wheel"
 "qt5ct"
-#"qtile"
+"qtile"
 "r"
 "rofi"
 "rust"
@@ -99,12 +100,20 @@ typeset -a USER_PKGS=(
 "xcb-util-keysyms"
 "xcb-util-cursor"
 "xcb-util-wm"
-#"zathura"
-#"zathura-pdf-mupdf"
-"zsh"
-"zsh-autosuggestions"
-"zsh-completions"
-"zsh-syntax-highlighting"
+"zathura"
+"zathura-pdf-mupdf"
+#"zsh"
+#"zsh-autosuggestions"
+#"zsh-completions"
+#"zsh-syntax-highlighting"
+) # }
+
+# List of flatpaks to install on fresh Pop!_OS installation {
+typeset -a FLATPAKS=(
+"com.github.tchx84.Flatseal"
+"com.spotify.Client"
+"org.jamovi.jamovi"
+#"org.jaspstats.JASP"
 ) # }
 
 # printing supporting {
@@ -160,6 +169,23 @@ case $input in
         [yY])
     echo
     sudo pacman -S ${USER_PKGS[*]} --needed
+    echo
+    ;;
+        [sS])
+    ;;
+        [cC])
+    exit
+    ;;
+esac
+
+# Install flatpaks
+read -r -p "Install flatpaks? [(Y)es/(S)kip/(C)ancel] " input
+echo
+case $input in
+        [yY])
+    echo
+    flatpak install flathub ${FLATPAKS[*]} -y
+    flatpak run --command=fc-cache org.jamovi.jamovi -f -v
     echo
     ;;
         [sS])
