@@ -87,6 +87,7 @@ gh_pkgs <- c(
   "paleolimbot/rbbt",
   "profandyfield/adventr",
   "profandyfield/discovr",
+  "rich-iannone/DiagrammeR",
   "ropenscilabs/icon",
   "rstudio/fontawesome",
   "statisfactions/simpr",
